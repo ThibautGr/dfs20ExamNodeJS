@@ -1,0 +1,28 @@
+<h3>Projects</h3>
+<ul class="mdl-list">
+    <% projects.forEach(project=> {%>
+        <li class="mdl-list__item">
+
+            <span class="mdl-list__item-primary-content">
+                <i class="material-icons mdl-list__item-icon">dashboard</i>
+                <a href="/bugs/<%= project._id %>">
+                    <%= project.name %>
+                </a>
+            </span>
+            <span class="mdl-list__item-primary-content">
+                <p>rédiger un rapport de bug pour : </p>
+                <a href="/bugs/<%= project._id %>">
+                    <%= project.name %>
+                </a>
+            </span>
+
+            <a href="/projects/update/<%= project._id %>" class="mdl-button mdl-js-button mdl-button--fab">
+                <i class="material-icons">edit</i>
+            </a>
+            <a href="/projects/delete/<%= project._id %>"
+                class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+                <i class="material-icons">delete</i>
+            </a>
+        </li>
+        <%}); %>
+</ul>

@@ -1,0 +1,26 @@
+<h3>Create report of a bug</h3>
+
+<form action="/bugs/create" method="POST">
+    <input type="hidden" name="projectId" value="<%= projectId %>"/>
+    <div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="title" name="title">
+            <label class="mdl-textfield__label" for="title">Title</label>
+        </div>
+    </div>
+    <div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <textarea class="mdl-textfield__input" type="text" rows="3" id="reproSteps" name="reproSteps"></textarea>
+            <label class="mdl-textfield__label" for="reproSteps">Steps for reproduc them</label>
+        </div>
+    </div>
+
+    <div>
+        <label for="priority">Priorité</label>
+        <input type="number" name="priority" for="priority" min="1" max="4">
+    </div>
+
+    <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+        Create
+    </button>
+</form>
